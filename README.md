@@ -1,4 +1,4 @@
-# Some text utils
+# text-utils
 
 A simple program written in Go. It has the following functionalities.
 
