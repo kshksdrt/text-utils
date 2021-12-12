@@ -15,5 +15,9 @@ func WordCounter() {
 }
 
 func getWordCount(text string) int {
-	return strings.Count(strings.Replace(text, "\n", "", -1), " ") + 1
+	return strings.Count(
+		strings.Replace( // Replace CRLF with LF
+			strings.Replace( // Replace double spaces with one
+				strings.Replace( // Replace double spaces with one, to clear odd number of spaces
+					text, "  ", " ", -1), "  ", " ", -1), "\n", "", -1), " ") + 1
 }
